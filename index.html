@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <section>
+        <div class="efecto-fondo"></div>
+        <div class="fondo"></div>
+        <section class="seccion">
+            <header class="encabezado">
+                <div>
+                    <h2 class="logo">Informatic</h2>
+                </div>
+                <div class="menu-group">
+                    <nav>
+                        <ul>
+                            <li class="menu">
+                                <a href="">Home</a>
+                                <a href="">Features</a>
+                                <a href="">About us</a>
+                                <a href="">Pricing</a>
+                                <a href="">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div>
+                    <h4 class="correo">isai.@gmail.com</h4>
+                </div>
+            </header>
+            <div class="titulo">
+                <div>
+                    <h6>PROFESSIONAL LANDING PAGE</h6>
+                </div>
+                <div>
+                    <h1>We help you manage your<br>website successfully!</h1>
+                </div>
+                <div class="form">
+                    <div class="form-email">
+                        <form action="#">
+                            <input name="email" placeholder="Enter your Email" type="text">
+                            <button type="submit">Get started</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <section class="seccion2">
+        <article class="articulo-group">
+            <article class="articulo-group1">
+                <div>
+                    <h2>What you get</h2>
+                    <br>
+                </div>
+                <li>
+                    <a onclick="menu(1)" id="uno" class="active">Responsive</a>
+                    <a onclick="menu(2)" id="dos" class="">Mobile</a>
+                    <a onclick="menu(3)" id="tres" class="">Support</a>
+                </li>
+                <div id="descripcion">
+                    <div id="responsive">
+                        <div>
+                            <span>Minimal Design</span>
+                            <p>Nam feugiat a ante sollicitudin luctus. Quisque eget placerat massa. Ut quis ligula
+                                ornare, pellentesque velit eget, vestibulum est. Donec pretium tristique elit eget
+                                sodales. Pellentesque posuere.</p>
+                        </div>
+                        <div>
+                            <span>Easy to use</span>
+                            <p>Aliquam massa massa, consectetur non mattis fringilla, sodales ac turpis. Morbi ac felis
+                                sagittis, faucibus mauris vitae, placerat mauris.</p>
+                        </div>
+                    </div>
+                    <div id="mobile">
+                        <div>
+                            <span>Minimal Design2</span>
+                            <p>Nam feugiat a ante sollicitudin luctus. Quisque eget placerat massa. Ut quis ligula
+                                ornare, pellentesque velit eget, vestibulum est. Donec pretium tristique elit eget
+                                sodales. Pellentesque posuere.</p>
+                        </div>
+                        <div>
+                            <span>Easy to use2</span>
+                            <p>Aliquam massa massa, consectetur non mattis fringilla, sodales ac turpis. Morbi ac felis
+                                sagittis, faucibus mauris vitae, placerat mauris.</p>
+                        </div>
+                    </div>
+                    <div id="support">
+                        <div>
+                            <span>Minimal Design3</span>
+                            <p>Nam feugiat a ante sollicitudin luctus. Quisque eget placerat massa. Ut quis ligula
+                                ornare, pellentesque velit eget, vestibulum est. Donec pretium tristique elit eget
+                                sodales. Pellentesque posuere.</p>
+                        </div>
+                        <div>
+                            <span>Easy to use3</span>
+                            <p>Aliquam massa massa, consectetur non mattis fringilla, sodales ac turpis. Morbi ac felis
+                                sagittis, faucibus mauris vitae, placerat mauris.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="articulo-group2">
+                <img class="articulo1" src="img/feature-mockup.png" alt="">
+            </article>
+        </article>
+    </section>
+
+    <script src="js/main.js"></script>
+    <script>
+        function menu(a) {
+            var responsive = document.getElementById("responsive");
+            var mobile = document.getElementById("mobile");
+            var support = document.getElementById("support");
+            var uno = document.getElementById("uno");
+            var dos = document.getElementById("dos");
+            var tres = document.getElementById("tres");
+            var val = a;
+            if (val == 1) {
+                mobile.style.display = "none";
+                support.style.display = "none";
+                responsive.style.display = "block";
+                uno.classList.add("active");
+                dos.classList.remove("active")
+                tres.classList.remove("active")
+            } else {
+                if (val == 2) {
+                    responsive.style.display = "none";
+                    support.style.display = "none";
+                    mobile.style.display = "block";
+                    uno.classList.remove("active");
+                    dos.classList.add("active")
+                    tres.classList.remove("active")
+                } else {
+                    if (val == 3) {
+                        mobile.style.display = "none";
+                        responsive.style.display = "none";
+                        support.style.display = "block";
+                        uno.classList.remove("active");
+                        dos.classList.remove("active")
+                        tres.classList.add("active")
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
